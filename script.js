@@ -12,34 +12,42 @@ let desencriptador = (exp, letra, palabra)=>{
 
 encriptar.addEventListener("click",()=>{
     let palabra = texto.value;
+    let reg = new RegExp(/[á-ú]|[.*+\-?^${}()|[\]\\]/, "i")
     let arreglo = Array.from(palabra)
     let textoEncriptado ="";
-    arreglo.map((letra)=>{
-        switch(letra){
-            case "a":
-                letra = "ai";
-                break;
-            case "e":
-                letra = "enter";
-                break;
-            case "i":
-                letra = "imes";
-                break;
-            case "o":
-                letra = "ober";
-                break;
-            case "u":
-                letra = "ufat";
-                break;
-            default:
-                break;
-        }
-        textoEncriptado += letra
-    });
-
-    encriptado.firstElementChild.textContent = textoEncriptado;
-    encriptado.classList.remove("invisible")
-    noTexto.classList.add("invisible")
+    if (reg.test(palabra)) {
+        texto.value = "Por favor, No use caracteres especiales";
+        setTimeout(()=>{
+            texto.value = "";
+        }, 1500);
+    } else{
+        arreglo.map((letra)=>{
+            switch(letra){
+                case "a":
+                    letra = "ai";
+                    break;
+                case "e":
+                    letra = "enter";
+                    break;
+                case "i":
+                    letra = "imes";
+                    break;
+                case "o":
+                    letra = "ober";
+                    break;
+                case "u":
+                    letra = "ufat";
+                    break;
+                default:
+                    break;
+            }
+            textoEncriptado += letra
+        });
+    
+        encriptado.firstElementChild.textContent = textoEncriptado;
+        encriptado.classList.remove("invisible")
+        noTexto.classList.add("invisible")
+    }
     
 });
 
