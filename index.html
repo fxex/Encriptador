@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/images/Logo.png" alt="Logo de Alura" class="header__logo">
+    </header>
+    <main class="main">
+        <section class="encriptador">
+            <textarea class="encriptador__texto" id="texto" cols="10" rows="40" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="contenedor">
+                <ul class="requisitos">
+                    <li class="requisitos__item requisitos__item--logo">!</li>
+                    <li class="requisitos__item">Solo letras minusculas y sin acentos</li>
+                </ul>
+                <div class="botones">
+                    <button class="botones__encriptar" id="encriptar">Encriptar</button>
+                    <button class="botones__desencriptar" id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+            
+        </section>
+        <section class="mensaje">
+            <div class="mensaje__contenedor invisible" id="encriptado">
+                <p class="mensaje__texto"></p>
+                <button class="mensaje__boton" id="copiar">Copiar</button>
+            </div>
+            <div class="mensaje__noTexto" id="noTexto">
+                <img src="assets/images/Muñeco.png" alt="persona investigando">
+                <h2 class="noTexto__titulo">Ningun mensaje fue encontrado</h2>
+                <p class="noTexto__parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </section>
+    </main>
+    <footer class="redes">
+        <ul class="redes__lista">
+            <li class="redes__item">
+                <a href="https://www.linkedin.com/in/hugo-antonio-frey-aguilar-159185200/" target="_blank">
+                    <img src="assets/images/Logo-de-Linkedin.png" alt="Logo de Linkedin" class="item__linkedin">
+                    <span class="span_linkedin">Linkedin</span>
+                </a>
+            </li>
+            <li class="redes__item">
+                <a href="https://github.com/fxex" target="_blank" >
+                    <img src="assets/images/Logo-de-GitHub.png" alt="Logo de Linkedin" class="item__github">
+                    <span class="span_github">GitHub</span>
+                </a>
+            </li>
+            
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
