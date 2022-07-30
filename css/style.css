@@ -136,7 +136,8 @@ body{
     text-align: left;
     color: #495057;
     display: block;
-    word-break: keep-all;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .mensaje__boton{
